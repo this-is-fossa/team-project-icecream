@@ -4,5 +4,22 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
+
+@import './utils/variables';
+@import './utils/default';
+@import './utils/placeholders';
+@import './components/common';
+
 @import './example';
 @import './gallery';
+
+@import './components/section-hero-header';
+@import './components/section-products';
+@import './components/section-about';
+@import './components/section-advantages';
+@import './components/section-gallery';
+@import './components/section-customer-reviews';
+@import './components/section-contacts';
+@import './components/section-footer';
+
+@import './components/mobile-menu';
