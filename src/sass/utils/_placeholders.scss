@@ -1,0 +1,136 @@
+%button-arrow-light {
+  padding: 14px 37px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $btn-bg-light;
+  color: $btn-text-dark;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  border-radius: 22px;
+
+  transition: bachround-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 10px;
+
+    margin-left: 12px;
+
+    background-image: url(../images/Arrow1-dark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $btn-light-accent;
+  }
+}
+
+%button-arrow-dark {
+  padding: 14px 37px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $btn-bg-dark;
+  color: $btn-text-light;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  border-radius: 22px;
+
+  transition: bachround-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 10px;
+
+    margin-left: 12px;
+
+    background-image: url(../images/Arrow1-light.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $btn-dark-accent;
+  }
+}
+
+%button-dark {
+  padding: 14px 37px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $btn-bg-dark;
+  color: $btn-text-light;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  border-radius: 22px;
+
+  transition: bachround-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $btn-dark-accent;
+  }
+}
+
+%button-light {
+  padding: 14px 37px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $btn-bg-light;
+  color: $btn-text-dark;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  border-radius: 22px;
+
+  transition: bachround-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $btn-light-accent;
+  }
+}
+
+@mixin transition1($property) {
+  transition: $property 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transition2($property1, $property2) {
+  transition: $property1 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    $property2 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
