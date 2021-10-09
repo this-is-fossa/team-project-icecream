@@ -21,6 +21,14 @@
   text-transform: uppercase;
   color: $text-color-accent-light;
   margin-bottom: 15px;
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
 }
 .about__title {
   font-family: Titan One;
@@ -52,6 +60,14 @@
   line-height: 1.62;
   color: $text-color-contrast-dark;
   margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.76;
+    margin-bottom: 35px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
 .description__second,
 .description__third {
@@ -61,6 +77,13 @@
   font-size: 12px;
   line-height: 1.62;
   color: #907e82;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.76;
+  }
+  @media screen and (min-width: 1200px) {
+    line-height: 1.94;
+  }
 }
 .description__second {
   margin-bottom: 10px;
