@@ -1,10 +1,19 @@
 .gallery {
+  margin-bottom: 80px;
+
   background-image: linear-gradient(
     to bottom,
     $bg-color-second 40%,
     $bg-color-main 40%,
     $bg-color-main 60%
   );
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 121px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 123px;
+  }
 }
 
 .gallery__title {
@@ -14,9 +23,7 @@
 .gallery__set {
   display: flex;
   justify-content: center;
-}
 
-.gallery__item {
   margin-top: -2px;
 
   @media screen and (min-width: 768px) {
@@ -138,6 +145,10 @@
   }
 }
 
+.img-container {
+  overflow: hidden;
+}
+
 .gallery__img {
   display: block;
 
@@ -152,6 +163,13 @@
   }
   @media screen and (min-width: 1200px) {
     margin-top: 8px;
+  }
+  transform: scale(1);
+  transition: transform 250ms ease-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(0.9);
   }
 }
 
