@@ -5,4 +5,93 @@
 
 .page-header {
   background-color: $bg-color-hero;
+  padding-top: 6px;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.site-nav {
+  display: flex;
+  width: 100%;
+}
+.mobile-header {
+  display: flex;
+  width: 100%;
+}
+.menu-button {
+  border: none;
+  background-color: transparent;
+  fill: $text-color-accent-strong;
+  &:hover {
+    background-color: #fff;
+    fill: $bg-color-hero;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: Titan One;
+
+  font-size: 26px;
+  line-height: calc(30 / 26);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $text-color-accent-strong;
+  margin-right: auto;
+  &__icon {
+    margin-right: 10px;
+  }
+}
+
+.menu-container {
+  display: none;
+}
+
+.logo__icon {
+  width: 50px;
+  height: 50px;
+}
+
+// -------------HERO---------------
+
+.hero {
+  background-color: $bg-color-hero;
+  padding-top: 137px;
+  padding-bottom: 160px;
+  background-image: url('..//images/hero-icecream-1x-min.png'),
+    radial-gradient(circle at center, $bg-color-hero-second 70%, transparent 70%);
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 32px, bottom 75px right -62px;
+  background-size: 171px 410px, 345px 345px;
+  &__title {
+    font-family: Titan One;
+    font-size: 26px;
+    line-height: calc(26 / 30);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 19px;
+    &--red {
+      font-size: 48px;
+      line-height: calc(46 / 48);
+      text-transform: uppercase;
+      color: $text-color-accent-strong;
+    }
+  }
+  &__button {
+    font-family: DM Sans;
+    font-size: 8px;
+    line-height: calc(10 / 8);
+    border: none;
+    padding: 7px 14px;
+  }
+  &__button--dark {
+    @extend %button-dark;
+  }
+  &__button--light {
+    @extend %button-light;
+  }
 }
