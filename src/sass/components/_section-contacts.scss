@@ -156,6 +156,7 @@
 
             background-color: #D41342;
             color: #ffffff;
+            fill: #ffffff;
             font-weight: 700;
             font-size: 16px;
            
@@ -166,8 +167,8 @@
               transition: background-color .25s cubic-bezier(.4,0,.2,1),transform .25s cubic-bezier(.4,0,.2,1);
                &:hover,
                &:focus{
-                  background-color:#ffffff;
-                  color: #D41342; ;
+                   background-color:$bg-color-contact-2;
+                  
               }
              
                 .contact__icon{
