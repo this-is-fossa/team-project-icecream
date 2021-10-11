@@ -5,8 +5,6 @@
 // $mobile-menu-bg-color: #e17992;       - бэкграунд мобильного меню
 .page-header {
   background-color: $bg-color-hero;
-<<<<<<< Updated upstream
-=======
   padding-top: 6px;
 }
 
@@ -151,5 +149,4 @@
   &__button--light {
     @extend %button-light;
   }
->>>>>>> Stashed changes
 }
