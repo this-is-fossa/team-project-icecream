@@ -1,0 +1,79 @@
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="modal__btn-close" data-modal-close>
+        <svg class="modal__icon-close" height="18" width="18">
+          <use href="./images/icon-sprite.svg#icon-modal-close"></use>
+        </svg>
+      </button>
+
+      <form class="modal-form">
+        <b class="modal-form__title">Leave your details, we will call you back</b>
+        <div class="form-input">
+          <label class="form-input__text" for="name" >Name</label>
+          <svg class="form-input__icon-user form-input__icon-contact" width="18" height="18">
+            <use href="./images/icon-sprite.svg#icon-person"></use>
+          </svg>
+          <input class="form-input__type" type="text" id="name" name="user-name">
+        </div>
+
+        <div class="form-input">
+          <label class="form-input__text" for="tel">Phone</label>
+          <svg class="form-input__icon-phone form-input__icon-contact" width="18" height="18">
+            <use href="./images/icon-sprite.svg#icon-phone"></use>
+          </svg>
+          <input class="form-input__type" type="tel" id="tel" name="user-tel">
+        </div>
+
+        <div class="form-input">
+          <label class="form-input__text" for="email">Adress</label>
+          <svg class="form-input__icon-email form-input__icon-contact" width="18" height="18">
+            <use href="./images/icon-sprite.svg#icon-adress"></use>
+          </svg>
+          <input class="form-input__type" type="email" name="user-mail" id="email">
+        </div>
+        
+        <div class="form-icecream">
+          <input class="form-icecream-checkbox visually-hidden" type="checkbox" name="vanilla" id="vanilla">
+          <label for="vanilla" class="form-icecream-checkbox__icecream">
+            <span class="form-icecream-checkbox__icon">
+            </span>
+            <span class="form-icecream__text">Icecream width vanilla</span>
+          </label>
+
+          <input class="form-icecream-checkbox visually-hidden" type="checkbox" name="chocolate" id="chocolate">
+          <label for="chocolate" class="form-icecream-checkbox__icecream">
+            <span class="form-icecream-checkbox__icon">
+            </span>
+            <span class="form-icecream__text">Icecream width chocolate</span>
+          </label>
+
+          <input class="form-icecream-checkbox visually-hidden" type="checkbox" name="lemon" id="lemon">
+          <label for="lemon" class="form-icecream-checkbox__icecream">
+            <span class="form-icecream-checkbox__icon">
+            </span>
+            <span class="form-icecream__text">Icecream width lemon</span>
+          </label>
+
+          <input class="form-icecream-checkbox visually-hidden" type="checkbox" name="strawberry" id="strawberry">
+          <label for="strawberry" class="form-icecream-checkbox__icecream">
+            <span class="form-icecream-checkbox__icon">
+            </span>
+            <span class="form-icecream__text">Icecream width strawberry</span>
+          </label>
+
+          <input class="form-icecream-checkbox visually-hidden" type="checkbox" name="raspberries" id="raspberries">
+          <label for="raspberries" class="form-icecream-checkbox__icecream">
+            <span class="form-icecream-checkbox__icon">
+            </span>
+            <span class="form-icecream__text">Icecream width raspberries</span>
+          </label>
+        </div>
+
+        <div class="form-input">
+          <label class="form-input__text" for="comment">Comment</label>
+          <textarea class="form-input__type" name="feedback" id="comment" placeholder="Text"></textarea>
+        </div>
+        <button class="form-icecream__modal-btn" type="submit"> Submit</button>
+      </form>
+    </div>
+  </div>
