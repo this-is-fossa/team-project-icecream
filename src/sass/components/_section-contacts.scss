@@ -7,8 +7,18 @@
 // $text-color-accent-light: #ffa5ba;               - цвет акцента розового
 
 .contacts{
-       
-        background-image:linear-gradient(180deg,#ffffff 7%,#fff5f6 0);
+    background-image:linear-gradient(180deg, #ffffff 7%,#fff5f6 0);
+
+}
+.contact__section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   .contact__commoncard{
+       margin-bottom: 53px;
+   }
 
 }
 .contact-card__block{
@@ -154,6 +164,11 @@
              cursor: pointer;
              transform: scale(1);
               transition: background-color .25s cubic-bezier(.4,0,.2,1),transform .25s cubic-bezier(.4,0,.2,1);
+               &:hover,
+               &:focus{
+                  background-color:#ffffff;
+                  color: #D41342; ;
+              }
              
                 .contact__icon{
                     margin-left: 11px;
@@ -181,6 +196,10 @@
         cursor: pointer;
         transform: scale(1);
         transition: background-color .25s cubic-bezier(.4,0,.2,1),transform .25s cubic-bezier(.4,0,.2,1);
+        &:hover,
+        &:focus{
+            background-color: #ECEBEB;
+        }
 
         .contact__icon{
             margin-left: 11px;
