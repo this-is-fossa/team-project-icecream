@@ -164,6 +164,11 @@
              cursor: pointer;
              transform: scale(1);
               transition: background-color .25s cubic-bezier(.4,0,.2,1),transform .25s cubic-bezier(.4,0,.2,1);
+               &:hover,
+               &:focus{
+                  background-color:#ffffff;
+                  color: #D41342; ;
+              }
              
                 .contact__icon{
                     margin-left: 11px;
@@ -191,6 +196,10 @@
         cursor: pointer;
         transform: scale(1);
         transition: background-color .25s cubic-bezier(.4,0,.2,1),transform .25s cubic-bezier(.4,0,.2,1);
+        &:hover,
+        &:focus{
+            background-color: #ECEBEB;
+        }
 
         .contact__icon{
             margin-left: 11px;
