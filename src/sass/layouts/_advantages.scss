@@ -1,11 +1,14 @@
 .advantages {
   background-color: $bg-color-second;
-  padding-bottom: 20px;
+  padding-top: 39px;
+  padding-bottom: 97px;
   padding-left: -5px;
   @media screen and (min-width: 768px) {
+    padding-top: 66px;
     padding-bottom: 140px;
   }
   @media screen and (min-width: 1200px) {
+    padding-top: 39px;
     padding-bottom: 139px;
     padding-left: -11px;
   }
