@@ -122,7 +122,7 @@ img {
   display: block;
   width: 40px;
   height: 40px;
-  background: $text-color-contrast-light url(./src/images/products/Arrow2.svg) no-repeat center;
+  background: $text-color-contrast-light url(../images/Arrow2.svg) no-repeat center;
   margin: 0 auto;
   border-radius: 50%;
 
@@ -140,15 +140,15 @@ img {
 }
 
 .products__block-img:first-child {
-  background: url(/src/images/products/desctop/desk-1.png) no-repeat center;
+  background: url(../images/products/desctop/desk-1.png) no-repeat center;
 }
 
 .products__block-img:nth-child(2) {
-  background: url(/src/images/products/desctop/desk-2.png) no-repeat center;
+  background: url(../images/products/desctop/desk-2.png) no-repeat center;
 }
 
 .products__block-img:last-child {
-  background: url(/src/images/products/desctop/desk-3.png) no-repeat center;
+  background: url(../images/products/desctop/desk-3.png) no-repeat center;
 }
 
 /* media */
@@ -163,15 +163,15 @@ img {
     top: -35px;
   }
   .products__block-img:first-child {
-    background: url(/src/images/products/tab/tab-1.png) no-repeat center;
+    background: url(../images/products/tab/tab-1.png) no-repeat center;
   }
 
   .products__block-img:nth-child(2) {
-    background: url(/src/images/products/tab/tab-2.png) no-repeat center;
+    background: url(../images/products/tab/tab-2.png) no-repeat center;
   }
 
   .products__block-img:last-child {
-    background: url(/src/images/products/tab/tab-3.png) no-repeat center;
+    background: url(../images/products/tab/tab-3.png) no-repeat center;
   }
   .products__block-title {
     font-size: 20px;
@@ -218,15 +218,15 @@ img {
     height: 252px;
   }
   .products__block-img:first-child {
-    background: url(/src/images/products/mob/mob-1.png) no-repeat center;
+    background: url(../images/products/mob/mob-1.png) no-repeat center;
   }
 
   .products__block-img:nth-child(2) {
-    background: url(/src/images/products/mob/mob-2.png) no-repeat center;
+    background: url(../images/products/mob/mob-2.png) no-repeat center;
   }
 
   .products__block-img:last-child {
-    background: url(/src/images/products/mob/mob-3.png) no-repeat center;
+    background: url(../images/products/mob/mob-3.png) no-repeat center;
   }
 
   .products__block-text {
