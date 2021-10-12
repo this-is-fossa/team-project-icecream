@@ -1,17 +1,38 @@
 <header class="page-header">
-  <div class="container">
-    <nav class="site-nav">
-      <a href="/" class="site-nav__item logo">
+  <div class="container main-nav">
+    <nav class="main-nav__item">
+      <a href="/" class="logo">
         <svg class="logo__icon">
           <use href="./images/icon-sprite.svg#iconLogo"></use>
         </svg>
         <span>Icecream</span>
       </a>
-      <a href="#home" class="site-nav__item">Home</a>
-      <a href="#about" class="site-nav__item">About us</a>
-      <a href="#how_made" class="site-nav__item">How it’s made?</a>
-      <a href="#products" class="site-nav__item">Our products</a>
-      <a href="#contact" class="site-nav__item">Contact</a>
+      <button type="button" class="menu-button js-open-menu">
+        <svg width="20" height="12" aria-label="Открытие мобильного меню">
+          <use class="icon-menu" href="./images/icon-sprite.svg#iconMenu-burger"></use>
+        </svg>
+      </button>
+      <div class="menu-container js-menu-container">
+        <div class="menu-wrapper">
+          <button type="button" class="menu-container__button-close js-close-menu">
+            <svg width="14" height="14" aria-label="Закрытие мобильного меню">
+              <use class="icon-menu" href="./images/icon-sprite.svg#iconClose"></use>
+            </svg>
+          </button>
+          <button type="button" class="menu-container__button">Buy now</button>
+        </div>
+        <ul class="site-nav">
+          <li class="site-nav__item"><a href="#home" class="site-nav__link is-active">Home</a></li>
+          <li class="site-nav__item"><a href="#about" class="site-nav__link">About us</a></li>
+          <li class="site-nav__item">
+            <a href="#how_made" class="site-nav__link">How it’s made?</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#products" class="site-nav__link">Our products</a>
+          </li>
+          <li class="site-nav__item"><a href="#contact" class="site-nav__link">Contact</a></li>
+        </ul>
+      </div>
     </nav>
     <button type="button" data-modal-open>Buy now</button>
     <button type="button" class="menu-button">
@@ -23,8 +44,12 @@
 </header>
 <section class="hero">
   <div class="container">
-    <h1 class="hero__title">ice cream made with passion</h1>
-    <button type="button" class="hero__button">Products</button>
-    <button type="button" class="hero__button">How it’s made?</button>
+    <h1 class="hero__title">
+      ice cream <br />
+      made with <br />
+      <span class="hero__title--red">passion</span>
+    </h1>
+    <button type="button" class="hero__button hero__button--dark">Products</button>
+    <button type="button" class="hero__button hero__button--light">How it’s made?</button>
   </div>
 </section>

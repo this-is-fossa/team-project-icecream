@@ -1,11 +1,19 @@
 .gallery {
+  margin-bottom: 80px;
+
   background-image: linear-gradient(
     to bottom,
     $bg-color-second 40%,
     $bg-color-main 40%,
     $bg-color-main 60%
   );
-  // min-width: 100%;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 121px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 123px;
+  }
 }
 
 .gallery__title {
@@ -15,9 +23,7 @@
 .gallery__set {
   display: flex;
   justify-content: center;
-}
 
-.gallery__item {
   margin-top: -2px;
 
   @media screen and (min-width: 768px) {
@@ -46,6 +52,11 @@
   &:nth-child(1) {
     margin-top: 40px;
   }
+  @media screen and (min-width: 480px) {
+    &:nth-child(1) {
+      margin-top: 61px;
+    }
+  }
   @media screen and (min-width: 768px) {
     &:nth-child(1) {
       margin-top: 87px;
@@ -59,6 +70,11 @@
 
   &:nth-child(2) {
     margin-top: 25px;
+  }
+  @media screen and (min-width: 480px) {
+    &:nth-child(2) {
+      margin-top: 37px;
+    }
   }
   @media screen and (min-width: 768px) {
     &:nth-child(2) {
@@ -74,6 +90,11 @@
   &:nth-child(4) {
     margin-top: 28px;
   }
+  @media screen and (min-width: 480px) {
+    &:nth-child(4) {
+      margin-top: 42px;
+    }
+  }
   @media screen and (min-width: 768px) {
     &:nth-child(4) {
       margin-top: 60px;
@@ -87,6 +108,11 @@
 
   &:nth-child(5) {
     margin-top: 15px;
+  }
+  @media screen and (min-width: 480px) {
+    &:nth-child(5) {
+      margin-top: 23px;
+    }
   }
   @media screen and (min-width: 768px) {
     &:nth-child(5) {
@@ -102,6 +128,11 @@
   &:nth-child(6) {
     margin-top: 44px;
   }
+  @media screen and (min-width: 480px) {
+    &:nth-child(6) {
+      margin-top: 67px;
+    }
+  }
   @media screen and (min-width: 768px) {
     &:nth-child(6) {
       margin-top: 95px;
@@ -114,32 +145,37 @@
   }
 }
 
+.img-container {
+  overflow: hidden;
+}
+
 .gallery__img {
   display: block;
 
   margin-top: 2px;
 
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 60px;
+    height: 60px;
+  }
   @media screen and (min-width: 768px) {
     margin-top: 4px;
   }
   @media screen and (min-width: 1200px) {
     margin-top: 8px;
   }
+  transform: scale(1);
+  transition: transform 250ms ease-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(0.9);
+  }
 }
 
-// .gallery__img--big {
-//   width: 80px;
-//   height: 80px;
-// }
-
-.gallery__img--responsive {
-  @media screen and (max-width: 479px) {
-    max-width: 100%;
-
-    @media screen and (min-width: 479px) and (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      min-width: 100%;
-    }
+.gallery__img--big {
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 120px;
+    height: 120px;
   }
 }

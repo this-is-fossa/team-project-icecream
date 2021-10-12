@@ -6,7 +6,21 @@
 // $text-color-contrast-dark: #000000;              - цвет текста черного
 // $text-color-accent-light: #ffa5ba;               - цвет акцента розового
 
+.contacts{
+    background-image:linear-gradient(180deg, #ffffff 7%,#fff5f6 0);
 
+}
+.contact__section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   .contact__commoncard{
+       margin-bottom: 53px;
+   }
+
+}
 .contact-card__block{
     width: 220px;
     height: 427px;
@@ -14,26 +28,34 @@
     box-shadow:0px 8px 30px rgba(212, 20, 67, 0.1); ;
     padding: 43px 20px;
     background: #ffffff;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: 20px 30px;
+    
     font-weight: 500;
     font-size: 12px;
-    line-height: 1.86;
+    line-height: 18px;
 
     .contact-card__title{
         
     padding-left: 25px;
     padding-right: 25px;
-    margin-bottom: 25px;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     font-size: 12px;
     line-height: 8,45;
     letter-spacing: .04em;
     color: #ffffff;
-    background-color: #f0d1a5;
+    
     border-radius: 4px;
     }
+    .contname{
+        background-color: #f0d1a5;
+        width: max-content;
+    }
+   .contnamegreen{
+       background-color: #C2E297;
+       width: max-content;
+
+   }
 
     .contact__title{
      margin-bottom: 10px;
@@ -44,10 +66,15 @@
     }
 
     .contact__text{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
         margin: 0;
-        line-height: 1.5;
         color: #907e82;
         margin-bottom: 25px;
+        text-align: left;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #e1e1e1;
 
 
     } 
@@ -55,10 +82,15 @@
 }
 
 .contact__list{
-
-    margin-top: 25px;
     text-align: left;
     font-size: 12px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e1e1e1;
+
+    .contact__item:not(:last-child){
+        margin-bottom: 10px;
+
+    }
 
     li{
         list-style: none;
@@ -66,12 +98,14 @@
 
     .contact__days{
         color: #000000;
+        margin: 0;
        
         
     }
 
     .contact__time{
         color: #ffa5ba;
+        margin: 0;
 
 
     }
@@ -80,14 +114,16 @@
 
 .contact-nav__list{
     margin-top: 25px;
+    line-height: 18px;
 
     li{
         list-style: none;
     }
+    
     .contact-nav__item{
         
         
-        padding-bottom: 2px;
+    padding-bottom: 2px;
     padding-top: 2px;
     font-size: 12px;
     color: #907e82;
@@ -98,22 +134,79 @@
 }
 
 .contact-button__list{
+    display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding-bottom: 113px;
     
     .contact-btn__item{
         margin-bottom: 10px;
         
         
         
-        .contact__btn{
+        .contact__btn-red{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             width: 161px;
             height: 44px;
             border-radius: 22px;
+
             background-color: #D41342;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 16px;
+           
+             border: none;
+
+             cursor: pointer;
+             transform: scale(1);
+              transition: background-color .25s cubic-bezier(.4,0,.2,1),transform .25s cubic-bezier(.4,0,.2,1);
+               &:hover,
+               &:focus{
+                  background-color:#ffffff;
+                  color: #D41342; ;
+              }
+             
+                .contact__icon{
+                    margin-left: 11px;
+
+                }
 
 
     }  
+    .contact__btn-white{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+
+        width: 161px;
+        height: 44px;
+        border-radius: 22px;
+        background-color: #ffffff;
+        color: #D41342;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1,83px;
+
+        border: none;
+        cursor: pointer;
+        transform: scale(1);
+        transition: background-color .25s cubic-bezier(.4,0,.2,1),transform .25s cubic-bezier(.4,0,.2,1);
+        &:hover,
+        &:focus{
+            background-color: #ECEBEB;
+        }
+
+        .contact__icon{
+            margin-left: 11px;
+
+        }
+
+}  
 
     }
 

@@ -2,7 +2,150 @@
 // $bg-color-hero-second: #ffa5ba;       - круг за мороженкой
 // $text-color-accent-strong: #D41443;   - акцент в тексте, цвет кнопок
 // $text-color-contrast-light: #ffffff;  - абцац в десктопе + меню навигации
-
+// $mobile-menu-bg-color: #e17992;       - бэкграунд мобильного меню
 .page-header {
   background-color: $bg-color-hero;
+  padding-top: 6px;
+}
+
+.main-nav {
+  display: flex;
+  &__item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.menu-button {
+  border: none;
+  background-color: transparent;
+  fill: $text-color-accent-strong;
+  &:hover {
+    fill: $bg-color-hero;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: Titan One;
+
+  font-size: 26px;
+  line-height: calc(30 / 26);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $text-color-accent-strong;
+  margin-right: auto;
+  &__icon {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.menu-container {
+  @media screen and (max-width: 767px) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(100%);
+    background-color: #e17992;
+    overflow-y: scroll;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &.is-open {
+      transform: translateX(0);
+    }
+    &__button-close {
+      display: block;
+      background-color: transparent;
+      border: none;
+      margin-left: auto;
+      padding: 0;
+    }
+  }
+  &__button {
+    border: none;
+    width: 100%;
+    margin-top: 23px;
+    @extend %button-arrow-light;
+  }
+}
+.menu-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 23px;
+  padding-bottom: 19px;
+}
+.site-nav {
+  display: block;
+  width: 100%;
+  margin-bottom: -22px;
+  &__item {
+    border-top: 1px solid #e18298;
+    padding-right: 20px;
+    padding-left: 20px;
+    &:last-child {
+      border-bottom: 1px solid #e18298;
+    }
+  }
+  &__link {
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    color: #ffffff;
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+.is-active {
+  color: $text-color-accent-strong;
+}
+
+// -------------HERO---------------
+
+.hero {
+  background-color: $bg-color-hero;
+  padding-top: 137px;
+  padding-bottom: 160px;
+  background-image: url('..//images/hero-icecream-1x-min.png'),
+    radial-gradient(circle at center, $bg-color-hero-second 70%, transparent 70%);
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 32px, bottom 75px right -62px;
+  background-size: 171px 410px, 345px 345px;
+  &__title {
+    font-family: Titan One;
+    font-size: 26px;
+    line-height: calc(26 / 30);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 19px;
+    margin-left: 5px;
+    &--red {
+      font-size: 48px;
+      line-height: calc(46 / 48);
+      text-transform: uppercase;
+      color: $text-color-accent-strong;
+    }
+  }
+  &__button {
+    font-family: DM Sans;
+    font-size: 8px;
+    line-height: calc(10 / 8);
+    border: none;
+    padding: 7px 14px;
+    margin-left: 5px;
+  }
+  &__button--dark {
+    @extend %button-dark;
+  }
+  &__button--light {
+    @extend %button-light;
+  }
 }
