@@ -194,18 +194,21 @@ img {
 
 .advantages {
   background-color: #fff5f6;
-  padding-bottom: 20px;
+  padding-top: 39px;
+  padding-bottom: 97px;
   padding-left: -5px;
 }
 
 @media screen and (min-width: 768px) {
   .advantages {
+    padding-top: 66px;
     padding-bottom: 140px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .advantages {
+    padding-top: 39px;
     padding-bottom: 139px;
     padding-left: -11px;
   }
@@ -965,7 +968,7 @@ img {
   content: '';
   width: 26px;
   height: 6px;
-  background: url(./src/images/products/Points.png) no-repeat center;
+  background: url(../images/products/Points.png) no-repeat center;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
