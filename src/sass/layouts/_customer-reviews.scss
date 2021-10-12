@@ -1,35 +1,3 @@
-/* .box {
-  padding-left: 50px;
-  padding-right: 50px;
-  background-color: #fafafa;
-  background: repeating-linear-gradient(
-    #fafafa,
-    #fafafa 20px,
-    #e1e1e1 20px,
-    #e1e1e1 23px
-  ); 
-
-  width: 280px;
-  height: 308px;
-  padding: 43px 66px 26px 57px;
-  box-sizing: border-box;
-}
-
-.box__text {
-  font-weight: 500;
-  font-style: normal;
-
-  desktop 
-  font-size: 12px;
-  line-height: 2.55;
-
-  display: inline;
-  background-repeat: no-repeat;
-  background-position: center bottom 2px;
-  background-size: 100% 2px;
-  background-image: linear-gradient(to top, #e1e1e1);
-} */
-
 /* // $bg-color-customer-review: #fafafa; - фон за текстом отзыва
 // $text-color-contrast-dark: #000000; - цвет текста
 // $text-color-accent-strong: #d41443; - цвет fill иконки прокрутки
@@ -56,7 +24,6 @@
     margin-left: auto;
     position: relative;
     padding: 43px 66px 26px 57px;
-    width: 280px;
     background-color: #fafafa;
 
     @media screen and(min-width: 768px) {
@@ -70,6 +37,7 @@
     &::after {
       content: '';
       position: absolute;
+      z-index: 2;
       left: 61px;
       top: 28px;
       width: 54px;
@@ -78,13 +46,15 @@
     }
   }
   &__text {
+    position: relative;
+    z-index: 3;
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     font-size: 12px;
     line-height: 2.55;
     color: #000000;
     text-align: center;
-    background-image: repeating-linear-gradient(#fafafa, #fafafa 27px, #e1e1e1 30px, #e1e1e1 25px);
+    background-image: repeating-linear-gradient(transparent, transparent 27px, #e1e1e1 29px);
 
     @media screen and(min-width: 768px) {
       font-size: 14px;
@@ -152,4 +122,28 @@
 .slider-nav {
   text-align: center;
   margin-top: 30px;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
 }
