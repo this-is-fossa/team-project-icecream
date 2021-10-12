@@ -353,13 +353,13 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .gallery__column:not(:first-child):not(:first-child) {
+  .gallery__column:not(:first-child) {
     margin-left: 4px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .gallery__column:not(:first-child):not(:first-child) {
+  .gallery__column:not(:first-child) {
     margin-left: 8px;
   }
 }
@@ -474,10 +474,6 @@ img {
   }
 }
 
-.img-container {
-  overflow: hidden;
-}
-
 .gallery__img {
   display: block;
   margin-top: 2px;
@@ -508,7 +504,7 @@ img {
   }
 }
 
-.gallery__img:hover, .gallery__img:focus {
+.gallery__img--skale:hover, .gallery__img--skale:focus {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
@@ -517,6 +513,154 @@ img {
   .gallery__img--big {
     width: 120px;
     height: 120px;
+  }
+}
+
+.scene {
+  -webkit-perspective: 400px;
+          perspective: 400px;
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (min-width: 480px) {
+  .scene {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .scene {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .scene {
+    width: 139px;
+    height: 139px;
+  }
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card .gallery__img {
+  margin-top: 0;
+}
+
+.card__face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 480px) {
+  .card__face {
+    border-radius: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card__face {
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card__face {
+    border-radius: 15px;
+  }
+}
+
+.card__face--back {
+  background: #e17992;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.scene:hover .card {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.gallery__btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  border: 0;
+  background: linear-gradient(160deg, #00c4ff, #9d1bb2);
+  cursor: pointer;
+}
+
+.gallery__card-text {
+  display: none;
+  color: #ffffff;
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+
+@media screen and (min-width: 480px) {
+  .gallery__card-text {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__card-text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery__card-text {
+    font-size: 20px;
+  }
+}
+
+.gallery__icon {
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery__icon {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -891,7 +1035,7 @@ img {
 }
 
 .products__section {
-  background: #e5e5e5;
+  background: #ffffff;
   font-family: 'Titan One', cursive;
   padding: 127px 0 119px;
   -webkit-box-sizing: border-box;
@@ -991,7 +1135,7 @@ img {
   display: block;
   width: 40px;
   height: 40px;
-  background: #ffffff url(../images/Arrow2.svg) no-repeat center;
+  background: #ffffff url(..images/products/arrow-right.svg) no-repeat center;
   margin: 0 auto;
   border-radius: 50%;
 }
