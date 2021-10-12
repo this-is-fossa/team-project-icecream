@@ -105,7 +105,13 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease, transform 0.6s ease;
+
+  &:hover {
+    border-radius: 50%;
+    background-color: #d31342;
+    transform: scale(1.2);
+  }
 
   &.active {
     background-image: url(../images/home.svg);
