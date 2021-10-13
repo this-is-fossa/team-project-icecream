@@ -13,7 +13,7 @@
 }
 
 .gallery {
-  margin-bottom: 80px;
+  padding-bottom: 80px;
 
   background-image: linear-gradient(
     to bottom,
@@ -81,6 +81,8 @@
 
 .gallery__img {
   display: block;
+
+  overflow: hidden;
 
   margin-top: 2px;
 
