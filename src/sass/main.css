@@ -6,7 +6,7 @@
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   color: #907e82;
   font-family: 'DM Sans', sans-serif;
   font-style: normal;
@@ -310,8 +310,8 @@ img {
 
 .gallery {
   margin-bottom: 80px;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #fff5f6), color-stop(40%, #e5e5e5), color-stop(60%, #e5e5e5));
-  background-image: linear-gradient(to bottom, #fff5f6 40%, #e5e5e5 40%, #e5e5e5 60%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #fff5f6), color-stop(40%, #ffffff), color-stop(60%, #ffffff));
+  background-image: linear-gradient(to bottom, #fff5f6 40%, #ffffff 40%, #ffffff 60%);
 }
 
 @media screen and (min-width: 768px) {
@@ -1135,7 +1135,7 @@ img {
   display: block;
   width: 40px;
   height: 40px;
-  background: #ffffff url(..images/products/arrow-right.svg) no-repeat center;
+  background: #ffffff url(../images/products/arrow-right.svg) no-repeat center;
   margin: 0 auto;
   border-radius: 50%;
 }
@@ -1144,7 +1144,8 @@ img {
   opacity: 0.8;
 }
 
-.products__block-img {
+.products__block-img-first {
+  background: url(../images/products/desctop/desk-1.png) no-repeat center;
   position: absolute;
   width: 335px;
   height: 335px;
@@ -1153,16 +1154,24 @@ img {
           transform: translateY(-50%);
 }
 
-.products__block-img:first-child {
-  background: url(../images/products/desctop/desk-1.png) no-repeat center;
-}
-
-.products__block-img:nth-child(2) {
+.products__block-img-second {
   background: url(../images/products/desctop/desk-2.png) no-repeat center;
+  position: absolute;
+  width: 335px;
+  height: 335px;
+  top: -70px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-.products__block-img:last-child {
+.products__block-img-third {
   background: url(../images/products/desctop/desk-3.png) no-repeat center;
+  position: absolute;
+  width: 335px;
+  height: 335px;
+  top: -70px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 /* media */
@@ -1171,19 +1180,23 @@ img {
     width: 220px;
     padding: 152px 0 40px;
   }
-  .products__block-img {
+  .products__block-img-first {
+    background: url(../images/products/tab/tab-1.png) no-repeat center;
     width: 220px;
     height: 226px;
     top: -35px;
   }
-  .products__block-img:first-child {
-    background: url(../images/products/tab/tab-1.png) no-repeat center;
-  }
-  .products__block-img:nth-child(2) {
+  .products__block-img-second {
     background: url(../images/products/tab/tab-2.png) no-repeat center;
+    width: 220px;
+    height: 226px;
+    top: -35px;
   }
-  .products__block-img:last-child {
+  .products__block-img-third {
     background: url(../images/products/tab/tab-3.png) no-repeat center;
+    width: 220px;
+    height: 226px;
+    top: -35px;
   }
   .products__block-title {
     font-size: 20px;
@@ -1229,7 +1242,8 @@ img {
   .products__block:not(:last-child) {
     margin-bottom: 130px;
   }
-  .products__block-img {
+  .products__block-img-first {
+    background: url(../images/products/mob/mob-1.png) no-repeat center;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1237,14 +1251,23 @@ img {
     width: 249px;
     height: 252px;
   }
-  .products__block-img:first-child {
-    background: url(../images/products/mob/mob-1.png) no-repeat center;
-  }
-  .products__block-img:nth-child(2) {
+  .products__block-img-second {
     background: url(../images/products/mob/mob-2.png) no-repeat center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: -115px;
+    width: 249px;
+    height: 252px;
   }
-  .products__block-img:last-child {
+  .products__block-img-third {
     background: url(../images/products/mob/mob-3.png) no-repeat center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: -115px;
+    width: 249px;
+    height: 252px;
   }
   .products__block-text {
     font-size: 14px;
@@ -1254,8 +1277,16 @@ img {
 }
 
 .contacts {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(7%, #ffffff), color-stop(0, #fff5f6));
-  background-image: linear-gradient(180deg, #ffffff 7%, #fff5f6 0);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(7%, #e5e5e5), color-stop(0, #fff5f6));
+  background-image: linear-gradient(180deg, #e5e5e5 7%, #fff5f6 0);
+  padding-bottom: 113px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(8%, #e5e5e5), color-stop(0, #fff5f6));
+    background-image: linear-gradient(180deg, #e5e5e5 8%, #fff5f6 0);
+  }
 }
 
 .contact__section {
@@ -1278,6 +1309,25 @@ img {
   margin-bottom: 53px;
 }
 
+@media screen and (min-width: 768px) {
+  .contact__section .contact__commoncard {
+    margin-bottom: 81px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__section .contact__commoncard {
+    margin-bottom: 86px;
+  }
+}
+
 .contact-card__block {
   width: 220px;
   height: 427px;
@@ -1292,6 +1342,32 @@ img {
   line-height: 18px;
 }
 
+@media screen and (min-width: 768px) {
+  .contact-card__block {
+    margin: 0 10px;
+    height: 544px;
+    padding: 50px 30px;
+  }
+  .contact-card__block:hover, .contact-card__block:focus {
+    -webkit-box-shadow: 1px 2px 2px rgba(109, 94, 94, 0.12), 1px 4px 6px rgba(105, 89, 89, 0.16);
+            box-shadow: 1px 2px 2px rgba(109, 94, 94, 0.12), 1px 4px 6px rgba(105, 89, 89, 0.16);
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-card__block {
+    width: 330px;
+    height: 572px;
+    margin: 0 15px;
+  }
+  .contact-card__block:hover, .contact-card__block:focus {
+    -webkit-box-shadow: 1px 2px 2px rgba(109, 94, 94, 0.12), 1px 4px 6px rgba(105, 89, 89, 0.16);
+            box-shadow: 1px 2px 2px rgba(109, 94, 94, 0.12), 1px 4px 6px rgba(105, 89, 89, 0.16);
+    cursor: pointer;
+  }
+}
+
 .contact-card__block .contact-card__title {
   padding-left: 25px;
   padding-right: 25px;
@@ -1302,6 +1378,20 @@ img {
   letter-spacing: .04em;
   color: #ffffff;
   border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-card__block .contact-card__title {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-card__block .contact-card__title {
+    margin-bottom: 32px;
+  }
 }
 
 .contact-card__block .contname {
@@ -1326,6 +1416,21 @@ img {
   color: #000000;
 }
 
+@media screen and (min-width: 768px) {
+  .contact-card__block .contact__title {
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-card__block .contact__title {
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+}
+
 .contact-card__block .contact__text {
   font-weight: 500;
   font-size: 12px;
@@ -1338,6 +1443,24 @@ img {
   border-bottom: 1px solid #e1e1e1;
 }
 
+@media screen and (min-width: 768px) {
+  .contact-card__block .contact__text {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    line-height: 23px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-card__block .contact__text {
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    line-height: 29px;
+    font-size: 16px;
+  }
+}
+
 .contact__list {
   text-align: left;
   font-size: 12px;
@@ -1345,8 +1468,34 @@ img {
   border-bottom: 1px solid #e1e1e1;
 }
 
+@media screen and (min-width: 768px) {
+  .contact__list {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__list {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
 .contact__list .contact__item:not(:last-child) {
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__list .contact__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__list .contact__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 .contact__list li {
@@ -1364,8 +1513,13 @@ img {
 }
 
 .contact-nav__list {
-  margin-top: 25px;
   line-height: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-nav__list {
+    line-height: 26px;
+  }
 }
 
 .contact-nav__list li {
@@ -1377,6 +1531,28 @@ img {
   padding-top: 2px;
   font-size: 12px;
   color: #907e82;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-nav__list .contact-nav__item {
+    font-size: 14px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contact-nav__list .contact-nav__item:hover, .contact-nav__list .contact-nav__item:focus {
+    cursor: pointer;
+    color: #c2e297;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .contact-nav__list .contact-nav__item {
+    font-size: 16px;
+  }
 }
 
 .contact-button__list {
@@ -1393,11 +1569,28 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 113px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-button__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .contact-button__list .contact-btn__item {
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-button__list .contact-btn__item {
+    margin-bottom: 0;
+  }
+  .contact-button__list .contact-btn__item:not(:last-child) {
+    margin-left: 15px;
+  }
 }
 
 .contact-button__list .contact-btn__item .contact__btn-red {
@@ -1428,8 +1621,22 @@ img {
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 768px) {
+  .contact-button__list .contact-btn__item .contact__btn-red {
+    width: 191px;
+    line-height: 4,76px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-button__list .contact-btn__item .contact__btn-red {
+    width: 198px;
+    line-height: 4,76px;
+  }
+}
+
 .contact-button__list .contact-btn__item .contact__btn-red:hover, .contact-button__list .contact-btn__item .contact__btn-red:focus {
-  background-color: #c2e297;
+  background-color: #f7174f;
 }
 
 .contact-button__list .contact-btn__item .contact__btn-red .contact__icon {
@@ -1463,6 +1670,20 @@ img {
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .contact-button__list .contact-btn__item .contact__btn-white {
+    width: 191px;
+    line-height: 4,76px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-button__list .contact-btn__item .contact__btn-white {
+    width: 198px;
+    line-height: 4,76px;
+  }
 }
 
 .contact-button__list .contact-btn__item .contact__btn-white:hover, .contact-button__list .contact-btn__item .contact__btn-white:focus {
@@ -1815,11 +2036,10 @@ img {
 .description {
   padding-left: 50px;
   padding-right: 50px;
-  padding-bottom: 40px;
   background-image: url("../images/about-bgMilk-mob-1x-min.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position-y: 150px;
+  background-position-y: center;
 }
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -1841,18 +2061,25 @@ img {
   }
 }
 
+.about__wrap {
+  padding-bottom: 40px;
+}
+
 @media screen and (min-width: 768px) {
   .about__wrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-bottom: 60px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .about__wrap {
     background-image: url("../images/about-bgMilk-1x-min.png");
-    background-size: cover;
+    background-size: 100%;
+    background-position-y: center;
+    padding-bottom: 80px;
   }
 }
 
