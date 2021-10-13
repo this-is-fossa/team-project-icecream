@@ -15,7 +15,7 @@
         "components/_section-products.scss",
         "components/_section-about.scss",
         "components/_section-gallery.scss",
-        "components/_section-contacts.scss",
+        "layouts/_contacts.scss",
         "components/_section-footer.scss",
         "components/_mobile-menu.scss",
         "components/_backdrop.scss",
