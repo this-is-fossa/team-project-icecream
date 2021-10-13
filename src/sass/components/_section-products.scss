@@ -55,11 +55,23 @@ img {
 }
 
 .products__wrappper {
-  max-width: 1048px;
-  margin: 259px auto 0;
+  
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    max-width: 742px;
+    margin-top: 259px;
+    margin-left: 19px;
+    margin-right: 19px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1170px;
+    margin-top: 259px;
+    margin-left: 58px;
+    margin-right: 58px;
+  }
 }
 
 .products__block {
