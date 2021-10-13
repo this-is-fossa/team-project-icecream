@@ -1,10 +1,11 @@
-.modal-gallery {
-  @extend .modal;
+.modal-map {
+  @extend .modal-gallery;
 
-  max-width: 70vw;
-  max-height: 70vh;
+  margin: 0;
+
   padding: 20px;
   padding-top: 50px;
+  padding-bottom: 20px;
 
   // height: 50vh;
   opacity: 1;
@@ -17,17 +18,14 @@
     transform: translate(-50%, -50%) scale(1.1);
   }
 
-  // @media screen and (max-width: 480px) {
-  //   max-width: 80vw;
-  // }
-  // @media screen and (min-width: 480px) {
-  //   max-width: 320px;
-  // }
-  // @media screen and (min-width: 768px) {
-  //   max-width: 400px;
-  // }
+  @media screen and (min-width: 480px) {
+    max-width: 420px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 500px;
+  }
   // @media screen and (min-width: 1200px) {
-  //   max-width: 500px;
+  //   max-width: 700px;
   // }
 }
 
@@ -51,9 +49,14 @@
   }
 }
 
-.modal-map__box {
-  display: block;
-  height: 50vh;
+.modal-map__outer-box {
   border: 10px solid #ffffff;
   border-radius: 7px;
+}
+
+.modal-map__box {
+  display: block;
+  max-height: 90%;
+  max-width: 100%;
+  border-radius: 0;
 }
