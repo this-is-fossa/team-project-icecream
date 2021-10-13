@@ -5,7 +5,7 @@
  */
 body {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #ffffff;
   color: #907e82;
   font-family: 'DM Sans', sans-serif;
@@ -1162,7 +1162,8 @@ img {
   opacity: 0.8;
 }
 
-.products__block-img {
+.products__block-img-first {
+  background: url(../images/products/desctop/desk-1.png) no-repeat center;
   position: absolute;
   width: 335px;
   height: 335px;
@@ -1171,16 +1172,24 @@ img {
   transform: translateY(-50%);
 }
 
-.products__block-img:first-child {
-  background: url(../images/products/desctop/desk-1.png) no-repeat center;
-}
-
-.products__block-img:nth-child(2) {
+.products__block-img-second {
   background: url(../images/products/desctop/desk-2.png) no-repeat center;
+  position: absolute;
+  width: 335px;
+  height: 335px;
+  top: -70px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-.products__block-img:last-child {
+.products__block-img-third {
   background: url(../images/products/desctop/desk-3.png) no-repeat center;
+  position: absolute;
+  width: 335px;
+  height: 335px;
+  top: -70px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 /* media */
@@ -1189,19 +1198,23 @@ img {
     width: 220px;
     padding: 152px 0 40px;
   }
-  .products__block-img {
+  .products__block-img-first {
+    background: url(../images/products/tab/tab-1.png) no-repeat center;
     width: 220px;
     height: 226px;
     top: -35px;
   }
-  .products__block-img:first-child {
-    background: url(../images/products/tab/tab-1.png) no-repeat center;
-  }
-  .products__block-img:nth-child(2) {
+  .products__block-img-second {
     background: url(../images/products/tab/tab-2.png) no-repeat center;
+    width: 220px;
+    height: 226px;
+    top: -35px;
   }
-  .products__block-img:last-child {
+  .products__block-img-third {
     background: url(../images/products/tab/tab-3.png) no-repeat center;
+    width: 220px;
+    height: 226px;
+    top: -35px;
   }
   .products__block-title {
     font-size: 20px;
@@ -1247,7 +1260,8 @@ img {
   .products__block:not(:last-child) {
     margin-bottom: 130px;
   }
-  .products__block-img {
+  .products__block-img-first {
+    background: url(../images/products/mob/mob-1.png) no-repeat center;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -1255,14 +1269,23 @@ img {
     width: 249px;
     height: 252px;
   }
-  .products__block-img:first-child {
-    background: url(../images/products/mob/mob-1.png) no-repeat center;
-  }
-  .products__block-img:nth-child(2) {
+  .products__block-img-second {
     background: url(../images/products/mob/mob-2.png) no-repeat center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: -115px;
+    width: 249px;
+    height: 252px;
   }
-  .products__block-img:last-child {
+  .products__block-img-third {
     background: url(../images/products/mob/mob-3.png) no-repeat center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: -115px;
+    width: 249px;
+    height: 252px;
   }
   .products__block-text {
     font-size: 14px;
@@ -1324,8 +1347,8 @@ img {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -1355,10 +1378,9 @@ img {
     height: 544px;
     padding: 50px 30px;
   }
-  .contact-card__block:hover,
-  .contact-card__block:focus {
+  .contact-card__block:hover, .contact-card__block:focus {
     -webkit-box-shadow: 1px 2px 2px rgba(109, 94, 94, 0.12), 1px 4px 6px rgba(105, 89, 89, 0.16);
-    box-shadow: 1px 2px 2px rgba(109, 94, 94, 0.12), 1px 4px 6px rgba(105, 89, 89, 0.16);
+            box-shadow: 1px 2px 2px rgba(109, 94, 94, 0.12), 1px 4px 6px rgba(105, 89, 89, 0.16);
     cursor: pointer;
   }
 }
@@ -1369,10 +1391,9 @@ img {
     height: 572px;
     margin: 0 15px;
   }
-  .contact-card__block:hover,
-  .contact-card__block:focus {
+  .contact-card__block:hover, .contact-card__block:focus {
     -webkit-box-shadow: 1px 2px 2px rgba(109, 94, 94, 0.12), 1px 4px 6px rgba(105, 89, 89, 0.16);
-    box-shadow: 1px 2px 2px rgba(109, 94, 94, 0.12), 1px 4px 6px rgba(105, 89, 89, 0.16);
+            box-shadow: 1px 2px 2px rgba(109, 94, 94, 0.12), 1px 4px 6px rgba(105, 89, 89, 0.16);
     cursor: pointer;
   }
 }
@@ -1546,6 +1567,13 @@ img {
   .contact-nav__list .contact-nav__item {
     font-size: 14px;
     -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contact-nav__list .contact-nav__item:hover, .contact-nav__list .contact-nav__item:focus {
     transform: scale(1);
     -webkit-transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
       -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1590,8 +1618,8 @@ img {
   .contact-button__list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -1644,14 +1672,19 @@ img {
 @media screen and (min-width: 768px) {
   .contact-button__list .contact-btn__item .contact__btn-red {
     width: 191px;
-    line-height: 4, 76px;
+    line-height: 4,76px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .contact-button__list .contact-btn__item .contact__btn-red {
     width: 198px;
-    line-height: 4, 76px;
+    line-height: 4,76px;
+  }
+}
+
+.contact-button__list .contact-btn__item .contact__btn-red:hover, .contact-button__list .contact-btn__item .contact__btn-red:focus {
+    line-height: 4,76px;
   }
 }
 
@@ -1701,14 +1734,32 @@ img {
 @media screen and (min-width: 768px) {
   .contact-button__list .contact-btn__item .contact__btn-white {
     width: 191px;
-    line-height: 4, 76px;
+    line-height: 4,76px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-button__list .contact-btn__item .contact__btn-white {
+    width: 191px;
+    line-height: 4,76px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .contact-button__list .contact-btn__item .contact__btn-white {
     width: 198px;
-    line-height: 4, 76px;
+    line-height: 4,76px;
+  }
+}
+
+.contact-button__list .contact-btn__item .contact__btn-white:hover, .contact-button__list .contact-btn__item .contact__btn-white:focus {
+  background-color: #ECEBEB;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-button__list .contact-btn__item .contact__btn-white {
+    width: 198px;
+    line-height: 4,76px;
   }
 }
 
@@ -2066,7 +2117,7 @@ img {
 .description {
   padding-left: 50px;
   padding-right: 50px;
-  background-image: url('../images/about-bgMilk-mob-1x-min.png');
+  background-image: url("../images/about-bgMilk-mob-1x-min.png");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position-y: center;
@@ -2109,7 +2160,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .about__wrap {
-    background-image: url('../images/about-bgMilk-1x-min.png');
+    background-image: url("../images/about-bgMilk-1x-min.png");
     background-size: 100%;
     background-position-y: center;
     padding-bottom: 80px;
