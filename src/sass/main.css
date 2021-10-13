@@ -1477,6 +1477,8 @@ img {
 
 @media screen and (min-width: 768px) {
   .products__wrappper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     max-width: 742px;
     margin-top: 259px;
     margin-left: 19px;
