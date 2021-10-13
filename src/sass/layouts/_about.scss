@@ -98,11 +98,10 @@
 .description {
   padding-left: 50px;
   padding-right: 50px;
-  padding-bottom: 40px;
   background-image: url('../images/about-bgMilk-mob-1x-min.png');
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position-y: 150px;
+  background-position-y: center;
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url('../images/about-bgMilk-mob-2x-min.png');
   }
@@ -115,12 +114,16 @@
   }
 }
 .about__wrap {
+  padding-bottom: 40px;
   @media screen and (min-width: 768px) {
     display: flex;
+    padding-bottom: 60px;
   }
   @media screen and (min-width: 1200px) {
     background-image: url('../images/about-bgMilk-1x-min.png');
-    background-size: cover;
+    background-size: 100%;
+    background-position-y: center;
+    padding-bottom: 80px;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../images/about-bgMilk-2x-min.png');
     }
