@@ -2526,7 +2526,7 @@ img {
   }
 }
 
-.modal, .modal-gallery {
+.modal, .modal-gallery, .modal-map {
   position: relative;
   max-width: 450px;
   min-height: 620px;
@@ -2542,7 +2542,7 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .modal, .modal-gallery {
+  .modal, .modal-gallery, .modal-map {
     max-width: 500px;
   }
 }
@@ -2808,7 +2808,7 @@ textarea::placeholder {
   background-color: #E17992;
 }
 
-.modal-gallery {
+.modal-gallery, .modal-map {
   min-height: 200px;
   opacity: 1;
   background: -webkit-gradient(linear, left top, right top, from(#feac5e), color-stop(#c779d0), to(#4bc0c8));
@@ -2821,31 +2821,31 @@ textarea::placeholder {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden .modal-gallery {
+.backdrop.is-hidden .modal-gallery, .backdrop.is-hidden .modal-map {
   -webkit-transform: translate(-50%, -50%) scale(1.1);
           transform: translate(-50%, -50%) scale(1.1);
 }
 
 @media screen and (max-width: 480px) {
-  .modal-gallery {
+  .modal-gallery, .modal-map {
     max-width: 80vw;
   }
 }
 
 @media screen and (min-width: 480px) {
-  .modal-gallery {
+  .modal-gallery, .modal-map {
     max-width: 320px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .modal-gallery {
+  .modal-gallery, .modal-map {
     max-width: 400px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .modal-gallery {
+  .modal-gallery, .modal-map {
     max-width: 500px;
   }
 }
@@ -2918,5 +2918,71 @@ textarea::placeholder {
   .modal-gallery__promocode {
     padding: 12px;
   }
+}
+
+.modal-map {
+  margin: 0;
+  padding: 20px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa5ba), to(#d41342));
+  background: linear-gradient(to right, #ffa5ba, #d41342);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal-map {
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+          transform: translate(-50%, -50%) scale(1.1);
+}
+
+@media screen and (min-width: 480px) {
+  .modal-map {
+    max-width: 420px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-map {
+    max-width: 500px;
+  }
+}
+
+.modal-gallery__btn-close {
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-gallery__btn-close:hover, .modal-gallery__btn-close:focus {
+  background-color: #383737;
+}
+
+.modal-gallery__icon-close {
+  fill: #d41443;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-gallery__btn-close:hover .modal-gallery__icon-close,
+.modal-gallery__btn-close:focus .modal-gallery__icon-close {
+  fill: #ffffff;
+  background-color: #383737;
+}
+
+.modal-map__outer-box {
+  border: 10px solid #ffffff;
+  border-radius: 7px;
+}
+
+.modal-map__box {
+  display: block;
+  max-height: 90%;
+  max-width: 100%;
+  border-radius: 0;
 }
 /*# sourceMappingURL=main.css.map */
