@@ -283,7 +283,7 @@ img {
 }
 
 .gallery {
-  margin-bottom: 80px;
+  padding-bottom: 80px;
   background-image: linear-gradient(to bottom, #fff5f6 40%, #ffffff 40%, #ffffff 60%);
 }
 
@@ -445,6 +445,7 @@ img {
 
 .gallery__img {
   display: block;
+  overflow: hidden;
   margin-top: 2px;
   transform: scale(1);
   transition: transform 250ms ease-out;
@@ -1006,6 +1007,8 @@ img {
   }
   .hero::before {
     display: none;
+    animation: zoomIn;
+    animation-duration: 0.5s;
   }
 }
 
