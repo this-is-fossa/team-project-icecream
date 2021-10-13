@@ -12,3 +12,18 @@
       refs.modal.classList.toggle('is-hidden');
     }
   })();
+
+  (() => {
+    const ref = {
+      openModalBtn: document.querySelector('[data-modal-desc]'),
+      closeModalBtn: document.querySelector('[data-modal-close-dsec]'),
+      modal: document.querySelector('[data-modal]'),
+    };
+  
+    ref.openModalBtn.addEventListener('click', toggleModal1);
+    ref.closeModalBtn.addEventListener('click', toggleModal1);
+  
+    function toggleModal1() {
+      ref.modal.classList.toggle('is-hidden');
+    }
+  })();
