@@ -12,44 +12,94 @@
           <use class="icon-menu" href="./images/icon-sprite.svg#iconMenu-burger"></use>
         </svg>
       </button>
-      <div class="menu-container js-menu-container">
-        <div class="menu-wrapper">
-          <button type="button" class="menu-container__button-close js-close-menu">
-            <svg width="14" height="14" aria-label="Закрытие мобильного меню">
-              <use class="icon-menu" href="./images/icon-sprite.svg#iconClose"></use>
-            </svg>
-          </button>
-          <button type="button" class="menu-container__button">Buy now</button>
+      <div class="desctop-menu-wrapper">
+        <div class="menu-container js-menu-container">
+          <div class="menu-wrapper">
+            <button type="button" class="menu-container__button-close js-close-menu">
+              <svg width="14" height="14" aria-label="Закрытие мобильного меню">
+                <use class="icon-menu" href="./images/icon-sprite.svg#iconClose"></use>
+              </svg>
+            </button>
+            <button type="button" class="menu-container__button" data-modal-open>Buy now</button>
+          </div>
+          <ul class="site-nav">
+            <li class="site-nav__item">
+              <a href="#home" class="site-nav__link is-active">Home</a>
+            </li>
+            <li class="site-nav__item"><a href="#about" class="site-nav__link">About us</a></li>
+            <li class="site-nav__item">
+              <a href="#how_made" class="site-nav__link">How it’s made?</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#products" class="site-nav__link">Our products</a>
+            </li>
+            <li class="site-nav__item"><a href="#contact" class="site-nav__link">Contact</a></li>
+          </ul>
         </div>
-        <ul class="site-nav">
-          <li class="site-nav__item"><a href="#home" class="site-nav__link is-active">Home</a></li>
-          <li class="site-nav__item"><a href="#about" class="site-nav__link">About us</a></li>
-          <li class="site-nav__item">
-            <a href="#how_made" class="site-nav__link">How it’s made?</a>
-          </li>
-          <li class="site-nav__item">
-            <a href="#products" class="site-nav__link">Our products</a>
-          </li>
-          <li class="site-nav__item"><a href="#contact" class="site-nav__link">Contact</a></li>
-        </ul>
+        <button type="button" class="main-nav__button" data-modal-open>Buy now</button>
       </div>
     </nav>
-    <button type="button" data-modal-open>Buy now</button>
-    <button type="button" class="menu-button">
-      <svg class="menu-button__icon" width="20" height="12" aria-label="Открытие мобильного меню">
-        <use href="./images/icon-sprite.svg#iconMenu-burger"></use>
-      </svg>
-    </button>
   </div>
 </header>
 <section class="hero">
   <div class="container">
-    <h1 class="hero__title">
-      ice cream <br />
-      made with <br />
-      <span class="hero__title--red">passion</span>
-    </h1>
-    <button type="button" class="hero__button hero__button--dark">Products</button>
-    <button type="button" class="hero__button hero__button--light">How it’s made?</button>
+    <div class="hero-content">
+      <div class="hero-content__item">
+        <h1 class="hero__title">
+          ice cream <br />
+          made with <br />
+          <span class="hero__title--red">passion</span>
+        </h1>
+        <ul class="button-list">
+          <li class="button-list__item">
+            <button type="button" class="hero__button hero__button--dark">Products</button>
+          </li>
+          <li class="button-list__item">
+            <button type="button" class="hero__button hero__button--light">How it’s made?</button>
+          </li>
+        </ul>
+      </div>
+      <ul class="outlets">
+        <li class="outlets__item">
+          <p class="outlets__description">
+            <span class="outlets__item--big">16</span>
+            <span class="outlets__item--small">cafes</span>
+          </p>
+        </li>
+        <li class="outlets__item">
+          <p class="outlets__description">
+            <span class="outlets__item--big">23</span>
+            <span class="outlets__item--small"> food trucks</span>
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="view-more">
+      <img
+        srcset="./images/hero-milk-1x-min.png 1x, ./images/hero-milk-2x-min.png 2x"
+        src="./images/hero-milk-1x-min.png"
+        alt="milk"
+        class="view-more__img"
+      />
+      <div class="view-more__description">
+        <p class="view-more__paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et
+        </p>
+        <button type="button" class="view-more__button"></button>
+      </div>
+    </div>
+    <img
+      srcset="./images/hero-icecream-1x-min.png 1x, ./images/hero-icecream-2x-min.png 2x"
+      src="./images/hero-icecream-1x-min.png"
+      alt="icecream"
+      class="hero-icecream-image"
+    />
+    <img
+      srcset="./images/hero-girl-1x-min.png 1x, ./images/hero-girl-2x-min.png 2x"
+      src="./images/hero-girl-1x-min.png"
+      alt="soo tasty"
+      class="hero-girl-image"
+    />
   </div>
 </section>
